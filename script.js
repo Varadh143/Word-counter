@@ -1,7 +1,7 @@
-const textInput = document.getElementById.("textInput");
-const charCount = document.getElementById.("charCount");
-const wordCount = document.getElementById.("wordCount");
-const sentenceCount = document.getElementById.("sentenceCount");
+const textInput = document.getElementById("textInput");
+const charCount = document.getElementById("charCount");
+const wordCount = document.getElementById("wordCount");
+const sentenceCount = document.getElementById("sentenceCount");
 
 textInput.addEventListener("input", () =>{
     let text = textInput.value;
@@ -16,5 +16,5 @@ wordCount.textContent = text.trim() === "" ? 0 : words.length;
 
 // Count sentences (split by ., !, ?)
 let sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
-    sentenceCount.textCount = sentences.length;
+    sentenceCount.textContent = sentences.length;
 });
